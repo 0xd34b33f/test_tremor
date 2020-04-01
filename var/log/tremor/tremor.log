@@ -1,0 +1,235 @@
+
+2020-04-01T12:57:56.760661714+00:00 - Stopping system
+2020-04-01T12:57:56.761693308+00:00 - Stopping onramps
+2020-04-01T12:57:56.762034679+00:00 - Onramp Stopped
+2020-04-01T12:57:56.762177810+00:00 - Stopping offramps
+2020-04-01T12:57:56.762355117+00:00 - Offramp system
+2020-04-01T12:57:56.762858180+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] stopped
+2020-04-01T12:57:59.978163733+00:00 - tremor version: 0.7.3
+2020-04-01T12:57:59.978263052+00:00 - rd_kafka version: 0x000002ff, 1.2.2
+2020-04-01T12:57:59.978477699+00:00 - Onramp thread started
+2020-04-01T12:57:59.978680276+00:00 - Onramp manager started
+2020-04-01T12:57:59.978862802+00:00 - Offramp thread started
+2020-04-01T12:57:59.978974493+00:00 - Offramp manager started
+2020-04-01T12:57:59.979586323+00:00 - Pipeline manager started
+2020-04-01T12:57:59.979616895+00:00 - Pipeline repository
+2020-04-01T12:57:59.979633187+00:00 - Pipeline repository
+2020-04-01T12:57:59.979646951+00:00 - Pipeline repository
+2020-04-01T12:57:59.979665667+00:00 - Pipeline repository
+2020-04-01T12:57:59.979679738+00:00 - Starting registry
+2020-04-01T12:57:59.979693259+00:00 - Starting registry
+2020-04-01T12:57:59.979706070+00:00 - Starting registry
+2020-04-01T12:57:59.979718020+00:00 - Starting registry
+2020-04-01T12:57:59.979910648+00:00 - Binding pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.980181460+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] starting thread.
+2020-04-01T12:57:59.980226188+00:00 - Linking pipeline tremor:///pipeline/system::metrics/system/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T12:57:59.980349980+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.980407980+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.980487853+00:00 - Binding offramp tremor:///offramp/system::stdout/system/in
+2020-04-01T12:57:59.980717466+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] started
+2020-04-01T12:57:59.980771319+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in ..
+2020-04-01T12:57:59.980870307+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.980932134+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.980997118+00:00 - Binding offramp tremor:///offramp/system::stderr/system/in
+2020-04-01T12:57:59.981164279+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] started
+2020-04-01T12:57:59.981270122+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in ..
+2020-04-01T12:57:59.981367977+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.981476748+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.982360520+00:00 - Binding tremor:///pipeline/example/passthrough/out to tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T12:57:59.982407563+00:00 - Offramp not found during binding process, binding tremor:///offramp/stdout-output/passthrough/in to create a new instance.
+2020-04-01T12:57:59.982420450+00:00 - Binding offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T12:57:59.982624671+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] started
+2020-04-01T12:57:59.982670405+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T12:57:59.982707203+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.982765499+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.982828227+00:00 - Pipeline (src) not found during binding process, binding tremor:///pipeline/example/passthrough/out to create a new instance.
+2020-04-01T12:57:59.982843131+00:00 - Binding pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T12:57:59.983121333+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T12:57:59.983158325+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] starting thread.
+2020-04-01T12:57:59.983228138+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.983281992+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/out to {"out": TremorURL { scope: Port, host: "", resource_type: Some(Offramp), artefact: Some("stdout-output"), instance: Some("passthrough"), instance_port: Some("in") }}
+2020-04-01T12:57:59.983309460+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T12:57:59.983416290+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting out to offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T12:57:59.983466614+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T12:57:59.983508558+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/example/passthrough/out
+2020-04-01T12:57:59.983599105+00:00 - Onramp not found during binding process, binding tremor:///onramp/ws-input/passthrough/out to create a new instance.
+2020-04-01T12:57:59.983620817+00:00 - Binding onramp tremor:///onramp/ws-input/passthrough/out
+2020-04-01T12:57:59.983677343+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T12:57:59.983909501+00:00 - [TCP Onramp] listening on 0.0.0.0:9000
+2020-04-01T12:57:59.984256099+00:00 - Binding binding tremor:///binding/example/passthrough
+2020-04-01T13:05:26.456196877+00:00 - Stopping system
+2020-04-01T13:05:26.456409686+00:00 - Stopping onramps
+2020-04-01T13:05:26.456553323+00:00 - Onramp Stopped
+2020-04-01T13:05:26.456671601+00:00 - Stopping offramps
+2020-04-01T13:05:26.456823125+00:00 - Offramp system
+2020-04-01T13:05:26.457512223+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] stopped
+2020-04-01T13:05:26.457577022+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] stopped
+2020-04-01T13:15:08.465140411+00:00 - tremor version: 0.7.3
+2020-04-01T13:15:08.466901051+00:00 - rd_kafka version: 0x000002ff, 1.2.2
+2020-04-01T13:15:08.467541352+00:00 - Onramp thread started
+2020-04-01T13:15:08.468124468+00:00 - Onramp manager started
+2020-04-01T13:15:08.468602376+00:00 - Offramp thread started
+2020-04-01T13:15:08.468834364+00:00 - Offramp manager started
+2020-04-01T13:15:08.469357832+00:00 - Pipeline manager started
+2020-04-01T13:15:08.469395622+00:00 - Pipeline repository
+2020-04-01T13:15:08.469410992+00:00 - Pipeline repository
+2020-04-01T13:15:08.469422103+00:00 - Pipeline repository
+2020-04-01T13:15:08.469432977+00:00 - Pipeline repository
+2020-04-01T13:15:08.469520929+00:00 - Starting registry
+2020-04-01T13:15:08.469536276+00:00 - Starting registry
+2020-04-01T13:15:08.469548104+00:00 - Starting registry
+2020-04-01T13:15:08.469559002+00:00 - Starting registry
+2020-04-01T13:15:08.478075803+00:00 - Binding pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.479048742+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] starting thread.
+2020-04-01T13:15:08.479583544+00:00 - Linking pipeline tremor:///pipeline/system::metrics/system/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T13:15:08.480932747+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.481654412+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.481937244+00:00 - Binding offramp tremor:///offramp/system::stdout/system/in
+2020-04-01T13:15:08.483742246+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] started
+2020-04-01T13:15:08.483967284+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in ..
+2020-04-01T13:15:08.484036032+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.484245781+00:00 - Binding offramp tremor:///offramp/system::stderr/system/in
+2020-04-01T13:15:08.484633356+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] started
+2020-04-01T13:15:08.484778654+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in ..
+2020-04-01T13:15:08.484864766+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.484959446+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.485113571+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.497053348+00:00 - Binding tremor:///pipeline/example/passthrough/out to tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:15:08.497132040+00:00 - Offramp not found during binding process, binding tremor:///offramp/stdout-output/passthrough/in to create a new instance.
+2020-04-01T13:15:08.497151418+00:00 - Binding offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:15:08.497866596+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T13:15:08.497905173+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] started
+2020-04-01T13:15:08.497969867+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.498055469+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.498081556+00:00 - Pipeline (src) not found during binding process, binding tremor:///pipeline/example/passthrough/out to create a new instance.
+2020-04-01T13:15:08.498098743+00:00 - Binding pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T13:15:08.499604925+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] starting thread.
+2020-04-01T13:15:08.499664020+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T13:15:08.499912692+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.499980+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/out to {"out": TremorURL { scope: Port, host: "", resource_type: Some(Offramp), artefact: Some("stdout-output"), instance: Some("passthrough"), instance_port: Some("in") }}
+2020-04-01T13:15:08.500009526+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:15:08.500144906+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting out to offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:15:08.500203200+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T13:15:08.500269256+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/example/passthrough/out
+2020-04-01T13:15:08.500331567+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T13:15:08.500385212+00:00 - Onramp not found during binding process, binding tremor:///onramp/ws-input/passthrough/out to create a new instance.
+2020-04-01T13:15:08.500400313+00:00 - Binding onramp tremor:///onramp/ws-input/passthrough/out
+2020-04-01T13:15:08.501277420+00:00 - [TCP Onramp] listening on 0.0.0.0:9000
+2020-04-01T13:15:08.501807778+00:00 - Binding binding tremor:///binding/example/passthrough
+2020-04-01T13:18:14.597934743+00:00 - Stopping system
+2020-04-01T13:18:14.598092145+00:00 - Stopping onramps
+2020-04-01T13:18:14.598230349+00:00 - Onramp Stopped
+2020-04-01T13:18:14.598362897+00:00 - Stopping offramps
+2020-04-01T13:18:14.598475549+00:00 - Offramp system
+2020-04-01T13:18:14.599005022+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] stopped
+2020-04-01T13:18:14.599106804+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] stopped
+2020-04-01T13:18:18.706933455+00:00 - tremor version: 0.7.3
+2020-04-01T13:18:18.707055259+00:00 - rd_kafka version: 0x000002ff, 1.2.2
+2020-04-01T13:18:18.707248297+00:00 - Onramp thread started
+2020-04-01T13:18:18.707476753+00:00 - Onramp manager started
+2020-04-01T13:18:18.707591056+00:00 - Offramp thread started
+2020-04-01T13:18:18.707780723+00:00 - Offramp manager started
+2020-04-01T13:18:18.708112375+00:00 - Pipeline manager started
+2020-04-01T13:18:18.708148578+00:00 - Pipeline repository
+2020-04-01T13:18:18.708166369+00:00 - Pipeline repository
+2020-04-01T13:18:18.708180843+00:00 - Pipeline repository
+2020-04-01T13:18:18.708193983+00:00 - Pipeline repository
+2020-04-01T13:18:18.708208011+00:00 - Starting registry
+2020-04-01T13:18:18.708222056+00:00 - Starting registry
+2020-04-01T13:18:18.708235661+00:00 - Starting registry
+2020-04-01T13:18:18.708248331+00:00 - Starting registry
+2020-04-01T13:18:18.708415409+00:00 - Binding pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.708719740+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] starting thread.
+2020-04-01T13:18:18.708843172+00:00 - Linking pipeline tremor:///pipeline/system::metrics/system/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T13:18:18.709077460+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.709142164+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.709335922+00:00 - Binding offramp tremor:///offramp/system::stdout/system/in
+2020-04-01T13:18:18.709765219+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] started
+2020-04-01T13:18:18.709887884+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in ..
+2020-04-01T13:18:18.709934276+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.709995980+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.710075013+00:00 - Binding offramp tremor:///offramp/system::stderr/system/in
+2020-04-01T13:18:18.710290505+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] started
+2020-04-01T13:18:18.710371118+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in ..
+2020-04-01T13:18:18.710414820+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.710459533+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.711568570+00:00 - Binding tremor:///pipeline/example/passthrough/out to tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:18:18.711619324+00:00 - Offramp not found during binding process, binding tremor:///offramp/stdout-output/passthrough/in to create a new instance.
+2020-04-01T13:18:18.711631006+00:00 - Binding offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:18:18.711907415+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] started
+2020-04-01T13:18:18.711961536+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T13:18:18.712007396+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.712097481+00:00 - Pipeline (src) not found during binding process, binding tremor:///pipeline/example/passthrough/out to create a new instance.
+2020-04-01T13:18:18.712110703+00:00 - Binding pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T13:18:18.712129035+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.712443612+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T13:18:18.712508791+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] starting thread.
+2020-04-01T13:18:18.712555470+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.712605779+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/out to {"out": TremorURL { scope: Port, host: "", resource_type: Some(Offramp), artefact: Some("stdout-output"), instance: Some("passthrough"), instance_port: Some("in") }}
+2020-04-01T13:18:18.712680285+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:18:18.712732424+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting out to offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:18:18.712782503+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T13:18:18.712823122+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/example/passthrough/out
+2020-04-01T13:18:18.712912023+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T13:18:18.712947604+00:00 - Onramp not found during binding process, binding tremor:///onramp/ws-input/passthrough/out to create a new instance.
+2020-04-01T13:18:18.712961674+00:00 - Binding onramp tremor:///onramp/ws-input/passthrough/out
+2020-04-01T13:18:18.713329239+00:00 - [TCP Onramp] listening on 0.0.0.0:9000
+2020-04-01T13:18:18.713638555+00:00 - Binding binding tremor:///binding/example/passthrough
+2020-04-01T13:43:36.823503365+00:00 - Stopping system
+2020-04-01T13:43:36.823744268+00:00 - Stopping onramps
+2020-04-01T13:43:36.823912236+00:00 - Onramp Stopped
+2020-04-01T13:43:36.824082226+00:00 - Stopping offramps
+2020-04-01T13:43:36.824234196+00:00 - Offramp system
+2020-04-01T13:43:36.824840357+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] stopped
+2020-04-01T13:43:41.963094648+00:00 - tremor version: 0.7.3
+2020-04-01T13:43:41.963214699+00:00 - rd_kafka version: 0x000002ff, 1.2.2
+2020-04-01T13:43:41.963363318+00:00 - Onramp thread started
+2020-04-01T13:43:41.963590004+00:00 - Onramp manager started
+2020-04-01T13:43:41.964513988+00:00 - Offramp thread started
+2020-04-01T13:43:41.964683836+00:00 - Offramp manager started
+2020-04-01T13:43:41.964986268+00:00 - Pipeline manager started
+2020-04-01T13:43:41.965049150+00:00 - Pipeline repository
+2020-04-01T13:43:41.965062132+00:00 - Pipeline repository
+2020-04-01T13:43:41.965070025+00:00 - Pipeline repository
+2020-04-01T13:43:41.965078806+00:00 - Pipeline repository
+2020-04-01T13:43:41.965086820+00:00 - Starting registry
+2020-04-01T13:43:41.965094688+00:00 - Starting registry
+2020-04-01T13:43:41.965102040+00:00 - Starting registry
+2020-04-01T13:43:41.965109452+00:00 - Starting registry
+2020-04-01T13:43:41.965359086+00:00 - Binding pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.965777472+00:00 - Linking pipeline tremor:///pipeline/system::metrics/system/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T13:43:41.965832273+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] starting thread.
+2020-04-01T13:43:41.965914668+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.966006355+00:00 - [Pipeline:tremor:///pipeline/system::metrics/system/in] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.966101211+00:00 - Binding offramp tremor:///offramp/system::stdout/system/in
+2020-04-01T13:43:41.966387344+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] started
+2020-04-01T13:43:41.966474017+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in ..
+2020-04-01T13:43:41.966522381+00:00 - Linking offramp tremor:///offramp/system::stdout/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.966576473+00:00 - [Offramp::tremor:///offramp/system::stdout/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.966667777+00:00 - Binding offramp tremor:///offramp/system::stderr/system/in
+2020-04-01T13:43:41.966928412+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] started
+2020-04-01T13:43:41.967012753+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in ..
+2020-04-01T13:43:41.967073197+00:00 - Linking offramp tremor:///offramp/system::stderr/system/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.967139164+00:00 - [Offramp::tremor:///offramp/system::stderr/system/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.968337896+00:00 - Binding tremor:///pipeline/example/passthrough/out to tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:43:41.968401512+00:00 - Offramp not found during binding process, binding tremor:///offramp/stdout-output/passthrough/in to create a new instance.
+2020-04-01T13:43:41.968421792+00:00 - Binding offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:43:41.968701523+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] started
+2020-04-01T13:43:41.968778171+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T13:43:41.968831166+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.968904974+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting system metrics pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.968932390+00:00 - Pipeline (src) not found during binding process, binding tremor:///pipeline/example/passthrough/out to create a new instance.
+2020-04-01T13:43:41.968953347+00:00 - Binding pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T13:43:41.969346419+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/metrics to {"metrics": TremorURL { scope: Port, host: "", resource_type: Some(Pipeline), artefact: Some("system::metrics"), instance: Some("system"), instance_port: Some("in") }}
+2020-04-01T13:43:41.969404857+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] starting thread.
+2020-04-01T13:43:41.969475581+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/metrics] Linking port metrics to tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.969552202+00:00 - Linking pipeline tremor:///pipeline/example/passthrough/out to {"out": TremorURL { scope: Port, host: "", resource_type: Some(Offramp), artefact: Some("stdout-output"), instance: Some("passthrough"), instance_port: Some("in") }}
+2020-04-01T13:43:41.969586087+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting metrics to pipeline tremor:///pipeline/system::metrics/system/in
+2020-04-01T13:43:41.969729091+00:00 - [Pipeline:tremor:///pipeline/example/passthrough/out] connecting out to offramp tremor:///offramp/stdout-output/passthrough/in
+2020-04-01T13:43:41.969783753+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in ..
+2020-04-01T13:43:41.969834919+00:00 - Linking offramp tremor:///offramp/stdout-output/passthrough/in to tremor:///pipeline/example/passthrough/out
+2020-04-01T13:43:41.969899952+00:00 - [Offramp::tremor:///offramp/stdout-output/passthrough/in] Connecting pipeline tremor:///pipeline/example/passthrough/out
+2020-04-01T13:43:41.969947602+00:00 - Onramp not found during binding process, binding tremor:///onramp/input/passthrough/out to create a new instance.
+2020-04-01T13:43:41.969965848+00:00 - Binding onramp tremor:///onramp/input/passthrough/out
+2020-04-01T13:43:41.970273880+00:00 - [TCP Onramp] listening on 0.0.0.0:9000
+2020-04-01T13:43:41.970600281+00:00 - Binding binding tremor:///binding/example/passthrough
