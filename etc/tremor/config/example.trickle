@@ -1,1 +1,8 @@
-select event from in into out
+define script validate
+script
+  match {"raw": event} of 
+    case  r= %{raw ~= re|^<134>|, footle == "bar" } => emit r.raw #testing, that string is syslog with needed facility
+    default => drop
+  end
+end; 
+select event from in into validate;
