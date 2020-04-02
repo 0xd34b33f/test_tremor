@@ -1,8 +1,24 @@
 define script validate
 script
   match {"raw": event} of 
-    case  r= %{raw ~= re|^<134>|, footle == "bar" } => emit r.raw #testing, that string is syslog with needed facility
-    default => drop
+    case  r= %{raw ~= re|(?P<capture>^<134>.*)|} => emit r.raw =>"ok" #testing, that string is syslog with needed facility
+    default => emit event => "invalid"
   end
-end; 
+end;
+define script parse_audit
+script
+  match {"raw": event} of
+    case r = %{raw ~= grok|.* : (?<hostname>[a-zA-Z0-9]+)|} => r.raw 
+    default => emit ["invalid", event] => "invalid"
+end 
+end;
+create script validate;
+create script parse_audit;
+
+
 select event from in into validate;
+select event from validate/ok into parse_audit;
+
+select event from parse_audit into out;
+select event from validate/invalid into out;
+select event from parse_audit/invalid into out;
