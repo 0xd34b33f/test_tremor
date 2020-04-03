@@ -7,7 +7,7 @@ script
       emit event => "invalid"
   end
 end;
-define script parse_audit
+define script tokenize_audit_messages
 script
   match {"raw": event} of
     # can do syslog validate (from above) and parse in one step too
@@ -16,13 +16,14 @@ script
     default => emit ["invalid", event] => "invalid"
   end
 end;
+
 create script validate;
-create script parse_audit;
+create script tokenize_audit_messages;
 
 
 select event from in into validate;
-select event from validate/ok into parse_audit;
+select event from validate/ok into tokenize_audit_messages;
 
-select event from parse_audit into out;
+select event from tokenize_audit_messages into out;
 select event from validate/invalid into out;
-select event from parse_audit/invalid into out;
+select event from tokenize_audit_messages/invalid into out;
