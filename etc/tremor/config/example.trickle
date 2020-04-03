@@ -12,7 +12,7 @@ script
   match {"raw": event} of
     # can do syslog validate (from above) and parse in one step too
     #case r = %{raw ~= dissect|<134>%{} : %{hostname} %{}|} => r.raw
-    case r = %{raw ~= dissect|%{} : %{hostname} %{?audisp} %{node} %{type} %{msg}: %{pid} %{uid} %{} %{auid} %{tty} %{ses} %{res} %{pkt_stc}|} => r.raw
+    case r = %{raw ~= dissect|%{} : %{hostname} %{?audisp} %{node} %{type} %{msg}: %{pid} %{uid} %{} %{auid} %{tty} %{} %{ses} %{res} %{pkt_stc}|} => r.raw
     default => emit ["invalid", event] => "invalid"
   end
 end;
