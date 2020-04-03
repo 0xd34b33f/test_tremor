@@ -7,33 +7,23 @@ script
       emit event => "invalid"
   end
 end;
-
 define script tokenize_audit_messages
 script
   match {"raw": event} of
     # can do syslog validate (from above) and parse in one step too
     #case r = %{raw ~= dissect|<134>%{} : %{hostname} %{}|} => r.raw
-    case r = %{raw ~= dissect|%{} : %{hostname} %{?audisp} %{node} %{type} %{msg}: %{pid} %{uid} %{} %{auid} %{tty} %{} %{ses} %{res} %{pkt_src}|} => r.raw
+    case r = %{raw ~= dissect|%{} : %{hostname} %{?audisp} node=%{node} type=%{type} msg=%{msg}: pid=%{pid} uid=%{uid} %{} auid=%{auid} tty=%{tty} %{} ses=%{ses} res=%{res} pkt_src_ip="%{pkt_src}"|} => r.raw
     default => emit ["invalid", event] => "invalid"
-  end
-end;
-
-define script parse_audit_logs
-script
-  match {"hostname":"data","node":"data","type":"data","msg":"data","pid":"data","uid":"data","auid":"data","tty":"data","ses":"data","res":"data","pkt_src":"data"} of
-    case node = %{ test ~= kv|%{key}=%{val}|} => node.parsed
-    default => emit "unparsed"
   end
 end;
 
 create script validate;
 create script tokenize_audit_messages;
-create script parse_audit_logs;
+
 
 select event from in into validate;
 select event from validate/ok into tokenize_audit_messages;
 
 select event from tokenize_audit_messages into out;
-select event from tokenize_audit_messages into parse_audit_logs;
 select event from validate/invalid into out;
 select event from tokenize_audit_messages/invalid into out;
