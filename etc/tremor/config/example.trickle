@@ -1,7 +1,7 @@
 define script validate
 script
   match {"raw": event} of 
-    case  r= %{raw ~= re|(?P<capture>^<134>.*)|} => emit r.raw =>"ok" #testing, that string is syslog with needed facility
+    case  r= %{raw ~= re|(?P<capture>^<134>.*)|} => emit event =>"ok" #testing, that string is syslog with needed facility
     default => emit event => "invalid"
   end
 end;
