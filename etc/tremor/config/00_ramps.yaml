@@ -1,19 +1,13 @@
-# The onramp and offramp sections of configuration specify external sources and sinks
-# to an instance of tremor-server.
-#
 onramp:
-  - id: input          # A unique id for binding/mapping
-    type: tcp              # The unique type descriptor for the onramp ( websocket server here)
-    codec: string           # The underlying data format expected for application payload data
-    preprocessors:
-      - lines
+  - id: input
+    type: blaster
+    codec: string
     config:
-      port: 4242          # The TCP port to listen on
-      host: '0.0.0.0'     # The IP address to bind on ( all interfaces in this case )
-      
+      source: /test_data     
 offramp:
-  - id: stdout-output     # The unique id for binding/mapping
-    type: stdout          # The unique type descriptor for the offramp ( stdout here )
-    codec: string           # The underlying data format expected for application payload data
+  - id: stdout-output
+    type: blackhole
     config:
-      prefix: '>> '       # A prefix for data emitted on standard output by this offramp
+      warmup_secs: 10
+      stop_after_secs: 40
+      significant_figures: 1

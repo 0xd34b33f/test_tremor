@@ -10,3 +10,4 @@ services:
     volumes:
       - ./etc/tremor:/etc/tremor:ro
       - ./var/log:/var/log:rw
+      - ./test_data:/test_data:ro
